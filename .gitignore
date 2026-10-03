@@ -1,0 +1,6 @@
+# Large trajectory JSONs are deliverables but live with the Zenodo results
+# deposit, not in git (GitHub file-size limits).
+data/case_*.json
+__pycache__/
+*.pyc
+*.log

@@ -1,0 +1,35 @@
+{
+ "prereg": "v2.0",
+ "flags": [
+  {
+   "utc": "2026-10-03T12:10:03Z",
+   "code": "DH-DROPPED",
+   "text": "DH case gated out; comparison proceeds without it"
+  },
+  {
+   "utc": "2026-10-03T12:12:17Z",
+   "code": "V1-FAIL",
+   "text": "quadrature J=256->512 differs by 3.79e-22 at z=275 (threshold 1e-35). Threshold miscalibrated for wide window (set from low-z v1 experience; v1 never ran V1 at high z). Monotone degradation with z."
+  },
+  {
+   "utc": "2026-10-03T12:12:17Z",
+   "code": "V3-FAIL",
+   "text": "PDE residual 1.25e-19 at (z=10,t=-0.5) vs 1e-20. DIAGNOSIS: test artifact \u2014 residual scales exactly as dt^2 (1e-6->1e-8 gives 1e-19->1e-23); the coded check measures finite-difference truncation, not the quadrature PDE violation (true residual ~1e-42)."
+  },
+  {
+   "utc": "2026-10-03T12:12:17Z",
+   "code": "V4-FAIL",
+   "text": "PDE sub-check 1.01e-20 vs 1e-20 (marginal). Same finite-difference artifact as V3. M48 vs M96 agreement itself exact (0.00e+00); construction 3.29e-54."
+  },
+  {
+   "utc": "2026-10-03T12:12:17Z",
+   "code": "SEED-INCOMPLETE",
+   "text": "t=0 seeding found 60/106 expected zeros; Newton unpolishable in |z| in (159,258). DIAGNOSIS: at dps=50 the fixed quadrature suffers ~35-digit cancellation in z-dependent bands; quadrature H_0 goes ghost-flat (|Hp|~1e-26 at \"zeros\"). Wide window not uniformly resolvable at dps=50/J=256. R8 anticipated this."
+  },
+  {
+   "utc": "2026-10-03T12:12:17Z",
+   "code": "STOP",
+   "text": "Per prereg section 7: STOP. Phase 1/2 barred until gates pass. No event-map science data collected."
+  }
+ ]
+}
